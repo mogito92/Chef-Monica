@@ -2,41 +2,272 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chef Monica — Private Tuscan Pasta Class & Lunch</title>
+  <meta name="description" content="Tap to view the menu (PDF) for Chef Monica’s Private Tuscan Pasta Class & Lunch — Villa del Dottore, Montecarlo (Lucca)." />
 
-  <title>Chef Monica — Menu</title>
-  <meta name="description" content="Private Tuscan Pasta Class & Lunch — Villa del Dottore, Montecarlo (Lucca)." />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://mogito92.github.io/Chef-Monica/" />
 
-  <!-- Open Graph preview -->
+  <!-- Open Graph (WhatsApp / Facebook / iMessage, etc.) -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Chef Monica" />
   <meta property="og:title" content="Chef Monica — Private Tuscan Pasta Class & Lunch" />
   <meta property="og:description" content="Tap to view the menu (PDF)." />
-  <meta property="og:image" content="https://mogito92.github.io/Chef-Monica/Thumb.png" />
   <meta property="og:url" content="https://mogito92.github.io/Chef-Monica/" />
 
-  <!-- Twitter -->
+  <!-- IMPORTANT: put the 1200x630 FIRST (best for link previews) -->
+  <meta property="og:image" content="https://mogito92.github.io/Chef-Monica/Thumb_OG_1200x630.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Optional fallback: square (some clients may prefer it) -->
+  <meta property="og:image" content="https://mogito92.github.io/Chef-Monica/Thumb_WhatsApp_1200x1200.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="1200" />
+
+  <!-- Twitter card (often used also by other preview engines) -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chef Monica — Private Tuscan Pasta Class & Lunch" />
+  <meta name="twitter:description" content="Tap to view the menu (PDF)." />
+  <meta name="twitter:image" content="https://mogito92.github.io/Chef-Monica/Thumb_OG_1200x630.png" />
+
+  <style>
+    :root{
+      --bg1:#0b0b0c;
+      --bg2:#141416;
+      --card:#111114cc;
+      --text:#f2f2f2;
+      --muted:#b9b9b9;
+      --gold:#c8a35a;
+      --gold2:#e6cf8f;
+      --stroke:rgba(200,163,90,.28);
+      --shadow: 0 24px 80px rgba(0,0,0,.55);
+      --radius: 22px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 30% 20%, rgba(200,163,90,.18), transparent 60%),
+        radial-gradient(900px 600px at 80% 70%, rgba(230,207,143,.10), transparent 60%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      display:grid;
+      place-items:center;
+      padding:28px 16px;
+    }
+    .wrap{
+      width:min(980px, 100%);
+      display:grid;
+      gap:18px;
+      grid-template-columns: 1.15fr .85fr;
+      align-items:stretch;
+    }
+    @media (max-width: 860px){
+      .wrap{grid-template-columns: 1fr}
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .card::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(700px 380px at 20% 10%, rgba(200,163,90,.22), transparent 55%);
+      pointer-events:none;
+      opacity:.85;
+    }
+    .hero{
+      padding:26px 26px 22px;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      position:relative;
+    }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-size:12px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .dot{
+      width:7px; height:7px; border-radius:999px;
+      background: linear-gradient(180deg, var(--gold2), var(--gold));
+      box-shadow: 0 0 0 6px rgba(200,163,90,.14);
+    }
+    h1{
+      margin:0;
+      font-size: clamp(28px, 3.4vw, 44px);
+      line-height:1.05;
+      letter-spacing:-.02em;
+    }
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-size: 15px;
+      line-height:1.45;
+      max-width: 58ch;
+    }
+    .actions{
+      margin-top:10px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      align-items:center;
+    }
+    .btn{
+      appearance:none;
+      border:none;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius: 999px;
+      font-weight:600;
+      letter-spacing:.01em;
+      transition: transform .15s ease, filter .15s ease, background .15s ease, border-color .15s ease;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:active{transform: translateY(1px)}
+    .primary{
+      background: linear-gradient(180deg, rgba(230,207,143,.22), rgba(200,163,90,.18));
+      border:1px solid var(--stroke);
+      color: var(--text);
+      backdrop-filter: blur(8px);
+    }
+    .primary:hover{filter: brightness(1.08)}
+    .ghost{
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+      color: var(--text);
+    }
+    .ghost:hover{background: rgba(255,255,255,.08)}
+    .meta{
+      margin-top: 14px;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      color: rgba(185,185,185,.92);
+      font-size: 13px;
+    }
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 10px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.22);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .right{
+      display:grid;
+      grid-template-rows: 1fr auto;
+      gap:18px;
+    }
+    .thumb{
+      position:relative;
+      overflow:hidden;
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.22);
+      box-shadow: 0 18px 55px rgba(0,0,0,.45);
+      min-height: 280px;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+      transform: scale(1.02);
+    }
+    .foot{
+      padding:16px 18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      color: rgba(185,185,185,.9);
+      font-size: 12px;
+      border-top:1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.16);
+    }
+    .smalllink{
+      color: rgba(230,207,143,.92);
+      text-decoration:none;
+      border-bottom: 1px solid rgba(230,207,143,.35);
+    }
+    .smalllink:hover{filter: brightness(1.12)}
+    .icon{
+      width:16px; height:16px; display:inline-block;
+      background: linear-gradient(180deg, var(--gold2), var(--gold));
+      -webkit-mask: var(--mask) center/contain no-repeat;
+      mask: var(--mask) center/contain no-repeat;
+    }
+    .pdfmask{ --mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M8 2h8l4 4v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V7h3.5L16 3.5zM8.75 13.5h1.2c.9 0 1.55.6 1.55 1.45S10.85 16.4 9.95 16.4h-.2v1.1H8.75v-4zm1.2 1.95c.32 0 .55-.22.55-.5s-.23-.45-.55-.45h-.2v.95h.2zM12.5 13.5h1.45c1.2 0 2 .8 2 2s-.8 2-2 2H12.5v-4zm1.45 3.05c.62 0 1.05-.45 1.05-1.05s-.43-1.05-1.05-1.05h-.45v2.1h.45zM17 13.5h2.6v.95H18v.75h1.45v.95H18v1.35H17v-4z"/></svg>');}
+    .openmask{ --mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg>');}
+  </style>
 </head>
 
-<body style="margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;">
-  <main style="min-height:100vh; display:grid; place-items:center; background:#f6f1e6;">
-    <div style="width:min(860px, 92vw); padding:24px;">
-      <div style="background:white; border-radius:22px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.15);">
-        <img src="./Thumb.png" alt="Chef Monica preview" style="display:block; width:100%; height:auto;">
-        <div style="padding:18px 18px 22px;">
-          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
-            <div>
-              <div style="font-size:18px; font-weight:700; color:#2a2018;">Chef Monica</div>
-              <div style="font-size:14px; color:#5a4a3d;">Private Tuscan Pasta Class & Lunch</div>
-            </div>
-            <a href="./Menu.pdf"
-               style="text-decoration:none; padding:12px 16px; border-radius:14px; background:#2a2018; color:#f6f1e6; font-weight:700;">
-              Open Menu (PDF)
-            </a>
-          </div>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="hero">
+        <div class="kicker"><span class="dot"></span> Villa del Dottore · Montecarlo, Lucca</div>
+        <h1>Chef Monica<br/>Private Tuscan Pasta Class &amp; Lunch</h1>
+        <p class="sub">
+          A refined, hands-on Tuscan experience. Tap below to open the menu PDF.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="./Menu.pdf" target="_blank" rel="noopener">
+            <span class="icon pdfmask" aria-hidden="true"></span>
+            View Menu (PDF)
+          </a>
+
+          <a class="btn ghost" href="./Menu.pdf" download>
+            <span class="icon openmask" aria-hidden="true"></span>
+            Download
+          </a>
+        </div>
+
+        <div class="meta">
+          <span class="chip">Instant open</span>
+          <span class="chip">WhatsApp-friendly link preview</span>
+          <span class="chip">Elegant NFC landing</span>
         </div>
       </div>
-    </div>
-  </main>
-</body>
-</html>
+
+      <div class="foot">
+        <span>Chef Monica</span>
+        <a class="smalllink" href="./Menu.pdf" target="_blank" rel="noopener">Open PDF</a>
+      </div>
+    </section>
+
+    <aside class="right">
+      <div class="thumb card" aria-label="Preview">
+        <img src="./Thumb_OG_1200x630.png" alt="Chef Monica — Menu cover preview" />
+      </div>
+
+      <div class="card" style="padding:16px 18px;">
+        <div style="display:flex; gap:10px; align-items:flex-start;">
+          <span class="dot" style="margin-top:6px;"></span>
+          <div>
+            <div style="font-weight:700; letter-spacing:.01em;">Tip (important)</div>
+            <div style="color:var(--muted); font-size:13px; line-height:1.45; margin-top:6px;">
+              WhatsApp previews are generated from this page’s <b>Open Graph</b> tags.
+              If you share the <b>PDF link</b> directly, previews may crop or break.
+              Always share: <span style="color:rgba(230,207,143,.92)">…/Chef-Monica/</span
