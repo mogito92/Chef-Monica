@@ -3,207 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-
   <title>Chef Monica — Menu PDF</title>
-  <meta name="description" content="Private Tuscan Pasta Class & Lunch — Villa del Dottore, Montecarlo (Lucca). Apri il menu in PDF." />
+  <meta name="description" content="Private Tuscan Pasta Class & Lunch — Villa del Dottore, Montecarlo (Lucca)." />
 
-  <!--
-    IMPORTANT:
-    Sostituisci BASE_URL con l'URL finale della pagina (HTTPS), esempio:
-    - https://USERNAME.github.io/REPO/
-    - https://menu.moghito.com/chef-monica/
-  -->
-  <link rel="canonical" href="BASE_URL" />
+  <link rel="canonical" href="https://mogito92.github.io/Chef-Monica-Loredana-Vannelli/" />
 
-  <!-- Open Graph -->
+  <!-- Open Graph (WhatsApp preview) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Chef Monica" />
   <meta property="og:title" content="Chef Monica — Menu PDF" />
   <meta property="og:description" content="Private Tuscan Pasta Class & Lunch — Villa del Dottore, Montecarlo (Lucca)." />
-  <meta property="og:url" content="BASE_URL" />
+  <meta property="og:url" content="https://mogito92.github.io/Chef-Monica-Loredana-Vannelli/" />
 
-  <!-- OG image (primary: 1200x630) -->
-  <meta property="og:image" content="BASE_URLlogo630.png" />
+  <!-- Primary image (best for WhatsApp): 1200x630 -->
+  <meta property="og:image" content="https://mogito92.github.io/Chef-Monica-Loredana-Vannelli/logo630.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Chef Monica — Menu PDF" />
 
-  <!-- OG image (secondary: 1200x1200) -->
-  <meta property="og:image" content="BASE_URLlogo1200.png" />
+  <!-- Optional secondary square -->
+  <meta property="og:image" content="https://mogito92.github.io/Chef-Monica-Loredana-Vannelli/logo1200.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="1200" />
   <meta property="og:image:alt" content="Chef Monica — Menu PDF" />
 
-  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Chef Monica — Menu PDF" />
   <meta name="twitter:description" content="Private Tuscan Pasta Class & Lunch — Villa del Dottore, Montecarlo (Lucca)." />
-  <meta name="twitter:image" content="BASE_URLlogo630.png" />
+  <meta name="twitter:image" content="https://mogito92.github.io/Chef-Monica-Loredana-Vannelli/logo630.png" />
 
-  <meta name="theme-color" content="#e9dfcf" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- Redirect immediato al PDF -->
+  <meta http-equiv="refresh" content="0; url=./Chef%20Monica%20Loredana%20Vannelli.pdf" />
+  <script>
+    window.location.replace("./Chef%20Monica%20Loredana%20Vannelli.pdf");
+  </script>
 
   <style>
-    :root{
-      --bg: #efe6d8;
-      --card: rgba(255,255,255,.62);
-      --text: #2a2420;
-      --muted: rgba(42,36,32,.7);
-      --border: rgba(42,36,32,.14);
-      --shadow: 0 18px 50px rgba(20,16,13,.18);
-      --radius: 22px;
-    }
-    *{ box-sizing: border-box; }
-    html, body{ height: 100%; }
-    body{
-      margin: 0;
-      color: var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background:
-        radial-gradient(1200px 800px at 20% -10%, rgba(255,255,255,.55), transparent 55%),
-        radial-gradient(900px 700px at 110% 10%, rgba(255,255,255,.35), transparent 50%),
-        linear-gradient(180deg, var(--bg), #f7f1e8 60%, #f3eadc);
-      padding: max(16px, env(safe-area-inset-top)) 14px max(18px, env(safe-area-inset-bottom));
-    }
-    .wrap{
-      max-width: 720px;
-      margin: 0 auto;
-      min-height: 100%;
-      display: grid;
-      align-content: center;
-      gap: 14px;
-    }
-    .card{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
-    .top{
-      padding: 18px 18px 14px;
-      display: grid;
-      gap: 10px;
-    }
-    .brand{
-      display: grid;
-      grid-template-columns: 56px 1fr;
-      gap: 12px;
-      align-items: center;
-    }
-    .logo{
-      width: 56px; height: 56px;
-      border-radius: 16px;
-      background: rgba(255,255,255,.55);
-      border: 1px solid var(--border);
-      display: grid; place-items: center;
-      overflow: hidden;
-    }
-    .logo img{ width: 100%; height: 100%; object-fit: contain; }
-    h1{
-      margin: 0;
-      font-size: 22px;
-      line-height: 1.15;
-      letter-spacing: .2px;
-    }
-    .sub{
-      margin: 0;
-      color: var(--muted);
-      font-size: 13.5px;
-      line-height: 1.35;
-    }
-    .actions{
-      display: grid;
-      gap: 10px;
-      margin-top: 6px;
-    }
-    .btn{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      border-radius: 16px;
-      padding: 14px 14px;
-      font-weight: 650;
-      font-size: 15px;
-      border: 1px solid var(--border);
-      color: var(--text);
-      background: rgba(255,255,255,.7);
-      transition: transform .08s ease, background .12s ease;
-      -webkit-tap-highlight-color: transparent;
-      user-select: none;
-    }
-    .btn:active{ transform: translateY(1px); }
-    .btn.primary{
-      background: rgba(42,36,32,.92);
-      color: #fff;
-      border-color: rgba(42,36,32,.35);
-    }
-    .row{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .pdf{
-      width: 100%;
-      height: 68vh;
-      border: 0;
-      display: block;
-      background: rgba(255,255,255,.6);
-      border-top: 1px solid var(--border);
-    }
-    .hint{
-      padding: 0 18px 18px;
-      color: var(--muted);
-      font-size: 12.5px;
-      line-height: 1.35;
-    }
-    @media (max-width: 420px){
-      .row{ grid-template-columns: 1fr; }
-      .pdf{ height: 62vh; }
-    }
+    html,body{height:100%;margin:0}
+    body{display:grid;place-items:center;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}
+    a{color:#111}
   </style>
 </head>
-
 <body>
-  <main class="wrap">
-    <section class="card" aria-label="Chef Monica Menu">
-      <div class="top">
-        <div class="brand">
-          <div class="logo">
-            <img src="./Logo.png" alt="Chef Monica logo" />
-          </div>
-          <div>
-            <h1>Chef Monica — Menu PDF</h1>
-            <p class="sub">Private Tuscan Pasta Class & Lunch · Villa del Dottore · Montecarlo (Lucca)</p>
-          </div>
-        </div>
-
-        <div class="actions">
-          <a class="btn primary" href="./Chef%20Monica%20Loredana%20Vannelli.pdf" target="_blank" rel="noopener">
-            Apri il PDF
-          </a>
-
-          <div class="row">
-            <a class="btn" href="./Chef%20Monica%20Loredana%20Vannelli.pdf" download>Scarica</a>
-            <a class="btn" href="./Chef%20Monica%20Loredana%20Vannelli.pdf#view=FitH" target="_blank" rel="noopener">Vista rapida</a>
-          </div>
-        </div>
-      </div>
-
-      <iframe
-        class="pdf"
-        title="Chef Monica Menu PDF"
-        src="./Chef%20Monica%20Loredana%20Vannelli.pdf#view=FitH&navpanes=0"
-        loading="lazy">
-      </iframe>
-
-      <div class="hint">
-        Se l’anteprima nelle chat non si aggiorna dopo modifiche, è cache: usa un path nuovo (es. /chef-monica-v2/).
-      </div>
-    </section>
-  </main>
+  <noscript>
+    <a href="./Chef%20Monica%20Loredana%20Vannelli.pdf">Apri il PDF</a>
+  </noscript>
 </body>
 </html>
